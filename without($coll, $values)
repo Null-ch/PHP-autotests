@@ -1,0 +1,13 @@
+Напишите тесты для функции without($coll, $values). Она принимает два массива, исключает из первого те значения, которые содержатся во втором и возвращает новый массив.
+
+class TestSolution extends TestCase
+{
+    public function testWithout()
+    {
+        // BEGIN (write your solution here)
+        $this->assertEquals(without([2, 1, 2, 3], [1, 2]), [3]);
+        $this->assertEquals(without([2, 1, 2, 3], []), [2, 1, 2, 3]);
+        $this->assertEquals(without([], [2, 1, 2]), []);
+        // END
+    }
+}
