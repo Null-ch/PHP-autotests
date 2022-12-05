@@ -1,0 +1,18 @@
+Напишите тесты для класса Validator. Он проверяет корректность данных. Принцип работы валидатора следующий:
+
+addCheck(fn) принимает в себя функцию для последующих проверок. Каждая проверка представляет собой функцию-предикат, которая принимает на вход проверяемое значение и возвращает либо true либо false в зависимости от того, соответствует ли значение требованиям проверки или нет.
+isValid(value) проверяет соответствие значения всем добавленным проверкам. Если не было добавлено ни одной проверки, считается, что любое значение верное.
+
+class SolutionTest extends TestCase
+{
+    public function testValidator(): void
+    {
+        // BEGIN (write your solution here)
+        $validator = new Validator();
+        $validator->addCheck(fn ($v) => $v > 5);
+        $this->assertTrue($validator->isValid(6));
+        $validator->addCheck(fn ($v) => $v < 15);
+        $this->assertFalse($validator->isValid(0));
+    // END
+    }
+}
