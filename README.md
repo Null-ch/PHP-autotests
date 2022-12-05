@@ -7,3 +7,4 @@ get($collection, $key, $defaultValue) <br />
 take($items, $n)<br />
 without($coll, $values)<br />
 gt($value, $other)<br />
+Validator<br />
