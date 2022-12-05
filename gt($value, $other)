@@ -1,0 +1,13 @@
+Напишите тесты для функции gt($value, $other), которая возвращает true в том случае, если $value > $other, и false в иных случаях.
+
+class TestSolution extends TestCase
+{
+    public function testGt()
+    {
+        // BEGIN (write your solution here)
+        $this->assertTrue(true === gt(3, 1));
+        $this->assertTrue(false === gt(1, 1));
+        $this->assertTrue(false === gt(1, 2));
+        // END
+    }
+}
