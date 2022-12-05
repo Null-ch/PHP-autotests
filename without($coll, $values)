@@ -11,3 +11,15 @@ class TestSolution extends TestCase
         // END
     }
 }
+
+class TestSolution extends TestCase
+{
+    public function testWithout()
+    {
+        // BEGIN (write your solution here)
+        $this->assertEquals([3], without([2, 1, 2, 3], [1, 2]));
+        $this->assertEquals([2, 1, 2, 3], without([2, 1, 2, 3], []));
+        $this->assertEquals([], without([], [2, 1, 2]));
+        // END
+    }
+}
